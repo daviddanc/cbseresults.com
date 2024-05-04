@@ -1,0 +1,98 @@
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-image {
+    background-image: url('https://i.imghippo.com/files/a3anV1714824516.png'); /* Provided background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #205081;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #205081;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    text-align: center;
+}
+
+button[type="reset"],
+button[type="submit"] {
+    background-color: #ec3c47;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #205081;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.captcha-display {
+    background-color: #eee;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}

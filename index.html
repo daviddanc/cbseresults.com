@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Ram Tripathi</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CBSE Examination Results 2024</title>
+</head>
+<body>
+<div class="bg-image">
+    <div class="container">
+        
+        <h2 class="page-title">Secondary School Examination (Class X) 2024  </h2>
+
+        <div class="form-container">
+            <form id="resultForm">
+                <div class="form-group">
+                    <label for="rollNumber">Roll Number:</label>
+                    <input type="text" id="rollNumber" name="rollNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="admitCardId">Admit Card ID:</label>
+                    <input type="text" id="admitCardId" name="admitCardId" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date Of Birth (DD/MM/YYYY):</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="securityPin">Security Pin:</label>
+                    <div class="captcha-display">
+                        <span id="generatedCaptcha"></span>
+                    </div>
+                    <input type="text" id="securityPin" placeholder="Enter CAPTCHA here" required>
+                </div>
+                
+                <div class="button-group">
+                    <button type="reset" onclick="generateCaptcha()">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <p class="disclaimer">Disclaimer: Neither NIC nor CBSE is responsible for any inadvertent error that may have crept in the results being published on NET. The results published on Net are for immediate information to the examinees. These cannot be treated as original mark sheets. Original mark sheets are issued by the Board separately.</p>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+<script>
+    document.getElementById('resultForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Check if captcha matches
+        var userCaptcha = document.getElementById('securityPin').value;
+        var generatedCaptcha = document.getElementById('generatedCaptcha').innerText;
+
+        if (userCaptcha === generatedCaptcha) {
+            // Redirect to another site
+            window.location.href = 'https://i.imghippo.com/files/hgXrj1714828828.jpg';
+        } else {
+            alert('Incorrect Captcha! Please try again.');
+        }
+    });
+</script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
